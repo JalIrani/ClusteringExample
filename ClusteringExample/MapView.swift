@@ -13,6 +13,9 @@ struct MapView: UIViewRepresentable {
     var forDisplay = data
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 43.64422936785126, longitude: 142.39329541313924),
                                                     span: MKCoordinateSpan(latitudeDelta: 1.5, longitudeDelta: 2))
+    @Binding var selectedAnnotation: LandmarkAnnotation?
+    @Binding var displaysheet: Bool
+
     
     class Coordinator: NSObject, MKMapViewDelegate {
         
@@ -32,6 +35,13 @@ struct MapView: UIViewRepresentable {
             return nil
         }
         
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+                if let annotation = view.annotation as? LandmarkAnnotation {
+                    self.parent.selectedAnnotation = annotation
+                    self.parent.displaysheet = true
+                    print(annotation.count)
+                }
+            }
     }
     
     func makeCoordinator() -> Coordinator {
@@ -149,4 +159,3 @@ class CustomClusterAnnotationView: MKMarkerAnnotationView {
         glyphTintColor = .white
     }
 }
-
