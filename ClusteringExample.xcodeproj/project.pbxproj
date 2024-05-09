@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C387A892BEBBE4A00889B5C /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C387A882BEBBE4A00889B5C /* SampleData.swift */; };
+		8C387A8B2BEBE24500889B5C /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C387A8A2BEBE24500889B5C /* LandmarkAnnotation.swift */; };
+		8C387A8E2BEBE3CD00889B5C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C387A8D2BEBE3CD00889B5C /* AnnotationView.swift */; };
+		8C387A902BEBE41900889B5C /* ClusterAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C387A8F2BEBE41900889B5C /* ClusterAnnotationView.swift */; };
 		8C73C5872BE5A56C00A59DB4 /* ClusteringExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C5862BE5A56C00A59DB4 /* ClusteringExampleApp.swift */; };
 		8C73C5892BE5A56C00A59DB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73C5882BE5A56C00A59DB4 /* ContentView.swift */; };
 		8C73C58D2BE5A56E00A59DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C73C58C2BE5A56E00A59DB4 /* Assets.xcassets */; };
@@ -35,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C387A882BEBBE4A00889B5C /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
+		8C387A8A2BEBE24500889B5C /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		8C387A8D2BEBE3CD00889B5C /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		8C387A8F2BEBE41900889B5C /* ClusterAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusterAnnotationView.swift; sourceTree = "<group>"; };
 		8C73C5832BE5A56C00A59DB4 /* ClusteringExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClusteringExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C73C5862BE5A56C00A59DB4 /* ClusteringExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClusteringExampleApp.swift; sourceTree = "<group>"; };
 		8C73C5882BE5A56C00A59DB4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -73,6 +81,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C387A862BEBBE1600889B5C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				8C387A8C2BEBE3BC00889B5C /* View */,
+				8C387A872BEBBE3800889B5C /* Model */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		8C387A872BEBBE3800889B5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C387A882BEBBE4A00889B5C /* SampleData.swift */,
+				8C387A8A2BEBE24500889B5C /* LandmarkAnnotation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C387A8C2BEBE3BC00889B5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C73C5B22BE5A57F00A59DB4 /* MapView.swift */,
+				8C387A8D2BEBE3CD00889B5C /* AnnotationView.swift */,
+				8C387A8F2BEBE41900889B5C /* ClusterAnnotationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8C73C57A2BE5A56C00A59DB4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,11 +132,11 @@
 		8C73C5852BE5A56C00A59DB4 /* ClusteringExample */ = {
 			isa = PBXGroup;
 			children = (
+				8C387A862BEBBE1600889B5C /* Map */,
 				8C73C5862BE5A56C00A59DB4 /* ClusteringExampleApp.swift */,
 				8C73C5882BE5A56C00A59DB4 /* ContentView.swift */,
 				8C73C58C2BE5A56E00A59DB4 /* Assets.xcassets */,
 				8C73C58E2BE5A56E00A59DB4 /* Preview Content */,
-				8C73C5B22BE5A57F00A59DB4 /* MapView.swift */,
 			);
 			path = ClusteringExample;
 			sourceTree = "<group>";
@@ -261,8 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C73C5892BE5A56C00A59DB4 /* ContentView.swift in Sources */,
+				8C387A8E2BEBE3CD00889B5C /* AnnotationView.swift in Sources */,
 				8C73C5B32BE5A57F00A59DB4 /* MapView.swift in Sources */,
+				8C387A8B2BEBE24500889B5C /* LandmarkAnnotation.swift in Sources */,
 				8C73C5872BE5A56C00A59DB4 /* ClusteringExampleApp.swift in Sources */,
+				8C387A902BEBE41900889B5C /* ClusterAnnotationView.swift in Sources */,
+				8C387A892BEBBE4A00889B5C /* SampleData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
