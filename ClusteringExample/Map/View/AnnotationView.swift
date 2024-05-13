@@ -13,6 +13,9 @@ class AnnotationView: MKMarkerAnnotationView {
     static let reuseId = "cultureAnnotation"
     static let clusterId = "clustering"
     
+    var titleLabel: UILabel?
+
+    
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         clusteringIdentifier = AnnotationView.clusterId
@@ -37,7 +40,24 @@ class AnnotationView: MKMarkerAnnotationView {
                 glyphTintColor = .white
             }
             glyphText = "\(annotation.count)"
+            
+            titleLabel = UILabel()
+            titleLabel?.text = annotation.name
+            titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+            titleLabel?.textColor = .black
+            titleLabel?.textAlignment = .center
+            titleLabel?.numberOfLines = 0
+            titleLabel?.sizeToFit()
+            
+            addSubview(titleLabel!)
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        titleLabel?.frame.origin = CGPoint(x: -titleLabel!.frame.width / 2 + bounds.width / 2, y: bounds.height)
+
+
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
