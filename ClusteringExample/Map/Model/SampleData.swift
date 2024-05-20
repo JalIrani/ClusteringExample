@@ -13,6 +13,7 @@ struct SampleData: Identifiable {
     var latitude: Double
     var longitude: Double
     var count: Int
+    var name: String
     var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }

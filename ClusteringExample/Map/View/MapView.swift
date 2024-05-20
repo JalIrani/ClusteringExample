@@ -53,7 +53,7 @@ struct MapView: UIViewRepresentable {
         view.mapType = .standard
         
         for points in forDisplay {
-            let annotation = LandmarkAnnotation(coordinate: points.coordinate, count: points.count)
+            let annotation = LandmarkAnnotation(coordinate: points.coordinate, count: points.count, name: points.name)
             view.addAnnotation(annotation)
         }
         return view
@@ -63,12 +63,12 @@ struct MapView: UIViewRepresentable {
 }
 
 var data = [
-    SampleData(latitude: 43.70564024126748, longitude: 142.37968945214223, count: 40),
-    SampleData(latitude: 43.73564025126748, longitude: 142.37968955214223, count: 20),
-    SampleData(latitude: 43.72564026126748, longitude: 142.37968946214223, count: 10),
-    SampleData(latitude: 43.81257464206404, longitude: 142.82112322464369, count: 60),
-    SampleData(latitude: 43.38416585162576, longitude: 141.7252598737476, count: 80),
-    SampleData(latitude: 45.29168643283501, longitude: 141.95286751470724, count: 100),
-    SampleData(latitude: 45.49261392585982, longitude: 141.9343973160499, count: 120),
-    SampleData(latitude: 44.69825427301145, longitude: 141.91227845284203, count: 150)
+    SampleData(latitude: 43.70564024126748, longitude: 142.37968945214223, count: 40, name: "test1"),
+    SampleData(latitude: 43.73564025126748, longitude: 142.37968955214223, count: 20, name: "THB + Bagelry and Deli"),
+    SampleData(latitude: 43.72564026126748, longitude: 142.37968946214223, count: 10, name: "test2"),
+    SampleData(latitude: 43.81257464206404, longitude: 142.82112322464369, count: 60, name: "test3"),
+    SampleData(latitude: 43.38416585162576, longitude: 141.7252598737476, count: 80, name: "Diamondback Brewery"),
+    SampleData(latitude: 45.29168643283501, longitude: 141.95286751470724, count: 100, name: "Yes-Chef"),
+    SampleData(latitude: 45.49261392585982, longitude: 141.9343973160499, count: 120, name: "Copper Shark"),
+    SampleData(latitude: 44.69825427301145, longitude: 141.91227845284203, count: 150, name: "jkwnefkwjefnkwjen")
 ]
